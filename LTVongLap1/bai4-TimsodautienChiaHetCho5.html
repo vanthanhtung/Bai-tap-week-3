@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var soMot=0; soHai=1; soHaicu=1;
+    for (let i = 0; i < 18; i++) {
+        soMot = soHaicu;
+        soHai = soMot + soHai;
+        soHaicu = soHai - soMot;
+
+        if (soHai%5==0){
+            alert("so "+ soHai +" la so dau tien cua day Fibonacci chia het cho 5"); break
+        }
+    }
+
+</script>
+</body>
+</html>

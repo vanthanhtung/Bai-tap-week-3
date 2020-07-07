@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="choi();"> BatDauChoi </button>
+<script>
+    var min = parseFloat(prompt('Nhập vào giới hạn nhỏ nhất'));
+    var max = parseFloat(prompt('Nhập vào giới hạn lớn nhất'));
+    var random = Math.floor(Math.random() * (max-min+1)) + min;
+    var count = 0;
+    var soDoan;
+
+
+        function choi() {
+            while (count<3) {
+
+            soDoan = parseFloat(prompt('Bạn đoán số bao nhiêu?'));
+                if (soDoan == random) {
+                    alert('Chúc mừng bạn đã đoán đúng số' + random);
+                    break;
+                } else if (soDoan < random) {
+                    alert('Số bạn đoán nhỏ hơn');
+                } else {
+                    alert('Số bạn đoán lớn hơn');
+                }
+                count++;
+                if (count ==3){
+                    alert('So random la: '+random);
+                }
+            }
+
+    }
+</script>
+</body>
+</html>
