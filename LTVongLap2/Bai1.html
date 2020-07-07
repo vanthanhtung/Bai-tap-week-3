@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var soMot=0; soHai=1; soHaicu=1;
+    document.write(soMot +" "+soHai+" ");
+    for (let i = 0; i < 100; i++) {
+        soMot = soHaicu;
+        soHai = soMot + soHai;
+        soHaicu = soHai - soMot;
+        document.write(soHai + " ");
+    }
+
+</script>
+</body>
+</html>
