@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Sample screen: </screen></p>
+<input type="text" id="text">
+<button type="button" onclick="addToArray();">Add</button>
+<button type="button" onclick="displayArray();">Display</button>
+<hr>
+<div id="result"></div>
+
+<script>
+    var x=0;
+    var array =[];
+
+    function addToArray() {
+        array[x] = document.getElementById('text').value;
+        alert("phần tử " + array[x] +" đã được thêm vào vị trí " + x);
+        x++;
+        document.getElementById('text').value = "";
+    }
+    
+    function displayArray() {
+        let e = "<hr>";
+        for (let i = 0; i < array.length; i++) {
+            e += ("Phần tử thứ "+ i + ": " +array[i] +"<br>" );
+        }
+        document.getElementById('result').innerHTML = e;
+    }
+</script>
+
+</body>
+</html>
