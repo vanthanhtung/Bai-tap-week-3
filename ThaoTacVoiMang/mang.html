@@ -24,11 +24,12 @@
     }
     
     function displayArray() {
-        let e = "<hr>";
+        let e = " ";
         for (let i = 0; i < array.length; i++) {
-            e += ("Phần tử thứ "+ i + ": " +array[i] +"<br>" );
+            e += "Phần tử thứ "+ i + ": " +array[i] +"<br>";
         }
-        document.getElementById('result').innerHTML = e;
+
+        document.getElementById('result').innerHTML = e + "<hr>";
     }
 </script>
 
