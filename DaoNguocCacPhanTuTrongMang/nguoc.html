@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var tung = [-3,5,1,3,2,10];
+    var first = 0;
+    var last = tung.length - 1;
+    while (first < last) {
+        let trungGian = tung[last];
+        tung[last] = tung[first];
+        tung[first] = trungGian;
+        first ++;
+        last --;
+    }
+    document.write(tung);
+</script>
+</body>
+</html>
