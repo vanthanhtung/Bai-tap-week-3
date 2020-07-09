@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập từ:</p>
+<input type="text" id="nhapVao">
+<button type="button" onclick="traTu();">Tra từ</button>
+
+<div id = display></div>
+
+
+<script>
+    var result ="";
+    var tiengAnh = ["hello","dog","cat"];
+    var tiengViet = ["xin chào","con chó","con mèo"];
+    var texttt ="";
+
+    function traTu() {
+        texttt = document.getElementById('nhapVao').value;
+        for (let i = 0; i <tiengAnh.length ; i++) {
+            if (texttt === tiengAnh[i]) {
+                result = ("<br>"+"Nghĩa Tiếng Việt: " + tiengViet[i]);break;
+            }
+            else {
+                result = "Từ này chưa có";
+            }
+        }
+        document.getElementById('display').innerHTML = result;
+    }
+
+</script>
+</body>
+</html>
