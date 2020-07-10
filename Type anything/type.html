@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Type anything here:</p>
+    <textarea rows="4" style="width:400px" onkeyup="myFuction()" id="textt"></textarea>
+
+<script>
+    var str = "Tôi là một người thông minh";
+    var count = 0;
+    var display = "";
+   function myFuction() {
+        if (display == str){
+            display= "";
+            count = 0;
+        }
+        else {
+            display += str[count];
+            count++;
+        }
+        document.getElementById("textt").value = display;
+   }
+</script>
+</body>
+</html>

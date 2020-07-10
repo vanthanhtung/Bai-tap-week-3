@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="tictic.css">
+</head>
+<body>
+<table>
+    <tr>
+        <td class="box" id="1" onclick="addXO(1)";></td>
+        <td class="box" id="2" onclick="addXO(2)";></td>
+        <td class="box" id="3" onclick="addXO(3)";></td>
+    </tr>
+    <tr>
+        <td class="box" id="4" onclick="addXO(4)";></td>
+        <td class="box" id="5" onclick="addXO(5)";></td>
+        <td class="box" id="6" onclick="addXO(6)";></td>
+    </tr>
+    <tr>
+        <td class="box" id="7" onclick="addXO(7)";></td>
+        <td class="box" id="8" onclick="addXO(8)";></td>
+        <td class="box" id="9" onclick="addXO(9)";></td>
+    </tr>
+</table>
+
+<script>
+    var trangThai = "X";
+    let winCombo = [
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6]
+    ];
+    function addXO(num) {
+    if (document.getElementById(num).innerHTML =="") {
+        if (trangThai == "X") {
+            document.getElementById(num).innerHTML = "X";
+            trangThai = "O";
+        } else {
+            document.getElementById(num).innerHTML = "O";
+            trangThai = "X";
+        }
+    }
+    checkWin();
+}
+function checkWin() {
+    for (let i = 0; i <winCombo.length ; i++) {
+        let ID = [];
+        for (let j = 0; j < winCombo[i].length ; j++) {
+            ID[j] = ''+winCombo[i][j];
+        }
+        let cell1 = document.getElementById(ID[0]).innerHTML;
+        let cell2 = document.getElementById(ID[1]).innerHTML;
+        let cell3 = document.getElementById(ID[2]).innerHTML;
+        alert(cell1,cell2,cell3);
+        if (cell1 == ""){
+            continue;
+        }
+        if (cell1 == cell2 && cell2 == cell3){
+            return true;
+        }
+    } return false;
+}
+</script>
+</body>
+</html>
