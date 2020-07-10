@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let isFound = false;
+    let mangSN = [2,21,-4,0,23,44,-3,10,21,6];
+    let soNguyenV = parseInt( prompt("nhập số nguyên V để kiểm tra và xóa"));
+    for (let i = 0; i <mangSN.length; i++) {
+        if (soNguyenV == mangSN[i]) {
+            mangSN.splice(i,1);
+            isFound = true;
+        }
+    }
+    if (isFound) {
+        document.write("kết quả: " + mangSN);
+    } else {
+        document.write("Ko có V trong dãy!")
+    }
+</script>
+</body>
+</html>

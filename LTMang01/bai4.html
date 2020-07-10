@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var mangSoNguyen = [2,21,-4,0,23,44,-3,10,9,6];
+    mangSoNguyen.reverse();
+
+    var count =0;
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        if (mangSoNguyen[i]<0) {
+            count++;
+        }
+    }
+    document.write(mangSoNguyen + "<br>");
+    document.write("có tất cả "+count+ " số nguyên âm trong mảng");
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var mangSoNguyen = [2,21,-4,0,23,44,-3,10,9,6];
+    var count = 0;
+    var hienThi = [];
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        if (mangSoNguyen[i] >=10) {
+            hienThi.push(mangSoNguyen[i]);
+            count ++;
+        }
+    }
+    document.write("có " + count +" số nguyên >= 10 là: " + hienThi);
+</script>
+</body>
+</html>
