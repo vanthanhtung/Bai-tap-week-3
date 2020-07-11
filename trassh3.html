@@ -6,17 +6,13 @@
 </head>
 <body>
 <script>
-    function swap(a, b) {
-        var temp = a;
-        var a = b;
-        var b = temp;
+    function func1(a){
+        if(a == 2)
+            return 2;
+        return a * func1(a - 1);
     }
-    var a=5;
-    var b=10;
-    swap();
-    document.write("a = " + a + ", b = " + b);
-
-
+    var result = func1(5);
+    document.write(result);
 </script>
 </body>
 </html>
