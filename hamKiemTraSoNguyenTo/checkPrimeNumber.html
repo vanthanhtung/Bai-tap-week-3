@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Check số nguyên tố:
+<input type="text" id="input">
+<button type="button" onclick="checkPrimerNumber()">Check!!!</button> <br> <br>
+<div id="hienThi"></div>
+<script>
+    function checkPrimerNumber() {
+        let input = parseInt(document.getElementById('input').value);
+        let result = isPrime(input);
+        document.getElementById("hienThi").innerHTML = result;
+    }
+    function isPrime(number) {
+        if (number < 2) {
+            return ("Số nhỏ hơn 2 đương nhiên ko là số nguyên tố bạn ơi!");
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return ("Số này ko phải số nguyên tố!");
+            }
+        }
+        return ("Số này là số nguyên tố!");
+    }
+</script>
+</body>
+</html>
