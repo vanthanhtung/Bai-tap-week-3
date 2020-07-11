@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+binh phuong cua <input type="text" id="input" oninput="caculator()" /> la: <span id="hienThi"></span>
+
+<script>
+    function abcd(number) {
+        let result = number * number;
+        return  result;
+    }
+
+    function caculator() {
+        let input = document.getElementById("input").value;
+        let result23 = abcd(input);
+        document.getElementById("hienThi").innerHTML = result23;
+    }
+</script>
+</body>
+</html>

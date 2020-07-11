@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập 1 câu vào đây!");
+    let count = 1;
+
+    for (let i = 0; i <str.length; i++) {
+        if (str[i] == " ") {
+            count++;
+        }
+    }
+    document.write("Câu này có " + count + " từ!");
+</script>
+</body>
+</html>

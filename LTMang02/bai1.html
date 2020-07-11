@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangA = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+
+    let hienThi ="";
+    for (let i = 0; i < mangA.length; i++) {
+        hienThi += "row " + i +": <br>" ;
+        for (let j = 0; j < mangA[i].length; j++) {
+            hienThi += mangA[i][j] + "<br>";
+        }
+    }
+    document.write(hienThi);
+</script>
+</body>
+</html>
